@@ -1,6 +1,6 @@
 # WeatherChannel
 # Live Link 
- https://git-theresa.github.io/WeatherChannel/
+ https://git-theresa.github.io/WeatherDashboard/
 
 
 # Contributor
