@@ -1,6 +1,6 @@
 # WeatherChannel
 # Live Link 
- https://git-theresa.github.io/WeatherChannel/
+ https://git-theresa.github.io/WeatherDashboard/
 
 
 # Contributor
@@ -22,7 +22,7 @@ MIT
 
 # Contact
 * Name: Theresa Eatherly [@git-theresa](@git-theresa)
-* Webpage: https://github.com/git-theresa/WeatherChannel
+* Webpage: https://github.com/git-theresa/WeatherDashboard
 * e-mail: [t.eatherly@gmail.com](t.eatherly@gmail.com)
 
 

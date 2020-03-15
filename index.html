@@ -7,17 +7,57 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
   <link rel="stylesheet" href="assets/style.css" />
-  <!-- Link jquery -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-</script>
-<!-- Link JavaScript -->
- <script type="text/javascript" src="assets/script.js">
-</script>
+ 
+
+
     <title>Weather Channel</title> 
 <!-- Begin Visual HTML -->
 
 <body>  
-<h1>HELLO </h1>
+<div class= "container">
+  <div class="row">
+    <div class="searchForm" id="search">
+      <div id = "search" class="flex-center flex-columns">
+        <input type="text" class="form" id="searchTerm"> 
+        <button type="submit" class="btn btn-default" id="searchBtn">
+        <i class="fa fa-search"></i>Get Weather</button>
+      </div>
+    </div>  
+  </div>
+<!-- Display Search History of City -->
+  <div class="row">
+    <div class= "col-md-12">
+        <div class= "panel panel-default">
+          <div class = "panel heading">
+          <h2 class="panel-title">History</h2>
+          </div>
+            <div class="panel-body">
+                <div class="col-sm-12">
+                   <br>
+                </div>   
+          </div>
+        </div>
+      </div>            
+  </div>                
+  <!--  -->
+            <div class="current weather" style="text-align: center">
+              <h2>Current Weather</h2>
+
+                <div class="fiveDayForecast" style="text-align: center">
+                  <h2>5 day Forecast</h2>             
+
+
+</div>
+</div>
+
+
+                </div>
+            </div>    
+        </div>
+    </div>
+  </div>
+</div>
+</div>
 
 
 
@@ -26,15 +66,11 @@
 
 
 
-
-
-<!-- End All. Do Not Touch -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
- integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
- crossorigin="anonymous"></script>
- 
+<!-- Do Not Touch!!! jQuery & JavaScript -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript File -->
+<script type="text/javascript" src="assets/script.js"></script>
 </head>
 </body>
 </html>

@@ -1,41 +1,44 @@
-  
- // This is our API key
-var APIKey =  "a40d2c347523bc6c683485054db1e19c"
-    // Here we are building the URL we need to query the database
-  
-    var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=a40d2c347523bc6c683485054db1e19c";
-//  $(document).ready(function() { 
-    // Here we run our AJAX call to the OpenWeatherMap API
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      // We store all of the retrieved data inside of an object called "response"
-      .then(function(response) {
+// set Variables
+var apiKey = "a40d2c347523bc6c683485054db1e19c";
+var queryURLBase = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=" + apiKey;
+var queryURL = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=a40d2c347523bc6c683485054db1e19c";
+console.log(queryURLBase);
+// Required in objects:
+// City Name
+//    * Date
+//    * Icon representation
+//    * Temperature
+//    * Humidity
+//    * Wind Speed
+//    * UV Index (with color representation)  
+//    _Hint: Multiple API endpoints will be required._
 
-        // Log the queryURL
-        console.log(queryURL);
+// set Functions
+var queryTerm ="";
+function runQuery(queryURL){
+  $.ajax({url: queryURL, method: "GET"})
+  .then(function(response) {
+    console.log(response);
+})
 
-        // Log the resulting object
-        console.log(response);
 
-        // Transfer content to HTML
-        // $(".city").html("<h1>" + response.name + " Weather Details</h1>");
-        // $(".wind").text("Wind Speed: " + response.wind.speed);
-        // $(".humidity").text("Humidity: " + response.main.humidity);
-        
-        // Convert the temp to fahrenheit
-        // var tempF = (response.main.temp - 273.15) * 1.80 + 32;
+}
 
-        // add temp content to html
-        // $(".temp").text("Temperature (K) " + response.main.temp);
-        // $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
-
-        // // Log the data in the console as well
-        // console.log("Wind Speed: " + response.wind.speed);
-        // console.log("Humidity: " + response.main.humidity);
-        // console.log("Temperature (F): " + tempF);
-      });
      
+// Main Process
+$("#searchBtn").on("click", function(event){
+  event.preventDefault();
+  var queryTerm = $("#searchTerm").val().trim;
+  var newURL = queryURLBase + "&q=" + queryTerm;
+  runQuery(newURL);
+  // runQuery("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=" + apiKey);
+  alert("hell0");
+  console.log(queryTerm);
+  console.log(newURL);
+})
+// 1. retrieve userInput and convert to variables
+// 2. use variables to run ajax
+// 3. Break down weather objects into usable fields
+// 4. dynamically generate html content using jquery
 
-  
+// search parameters   
