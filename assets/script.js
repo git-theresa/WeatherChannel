@@ -45,24 +45,49 @@ function runQuery(queryURL){
     // $("currentTempSection" + i).append("<p>" + (response.list[i].main.temp) + "</p>");
     // $("#currentWeather").append(currentTempSection);
   }
-    
+    // Local Storage Set 
 console.log(response.list[7].main.temp);
 localStorage.setItem("currentTemp", response.list[7].main.temp);
 localStorage.setItem("currentTempList", JSON.stringify([response.list[7].main.temp]));
-
 var currentTemp = localStorage.getItem("currentTemp") || "Nashville";
 // localStorage.getItem("currentTemp");
 var currentTempList = JSON.parse(localStorage.getItem("currentTempList")) || [];
 console.log(currentTemp, currentTempList);
 //  grab id to chang HTML response.main.temp / response.main.uv
+var queryTerm=$("#searchTerm").val();;
+localStorage.setItem("#searchTerm", queryTerm);
+var queryTermList = localStorage.setItem("#searchTerm", JSON.stringify([queryTerm])) || "Nashville";
 
-// var lastSearchCity = 
+localStorage.getItem(queryTerm, queryTermList);
+// localStorage.getItem("#searchTerm" , queryTermList)=$("<div>");
+console.log(queryTermList);
+// ("#search").append(localStorage.getItem(queryTerm));
+
 })
 }
-     
+
+// function myFunction() {
+//   var x = sessionStorage.test1;
+//   document.getElementById("demo").innerHTML = x;
+// }
+
 // Main Process
 $("#searchBtn").on("click", function(event){
   event.preventDefault();
+  var queryTerm = $("<h2>");
+  var queryTerm=$("#searchTerm").val();;
+  localStorage.setItem("#searchTerm", queryTerm);
+  var queryTermList = localStorage.setItem("#searchTerm", JSON.stringify([queryTerm])) || "Nashville";
+  
+  localStorage.getItem(queryTerm, queryTermList);
+  // localStorage.getItem("#searchTerm" , queryTermList)=$("<div>");
+  console.log(queryTermList);
+ 
+
+// var queryTerm=$("#searchTerm").val();;
+// localStorage.setItem("#searchTerm", queryTerm);
+localStorage.getItem("#searchTerm", queryTerm);
+ $("#history").append(queryTerm);
   var queryTerm = $("#searchTerm").val().trim();
   var newURL = queryURLBase + "&q=" + queryTerm;
   runQuery(newURL);
