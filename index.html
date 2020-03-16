@@ -15,7 +15,7 @@
 
 <body>  
 <div class= "container">
-  <div class="row">
+  <!-- <div class="row"> -->
 
     <div class="searchForm" id="search">
       <div id = "search" class="flex-center flex-columns">
@@ -24,40 +24,83 @@
         <i class="fa fa-search"></i>Get Weather</button>
       </div>
     </div>  
-  </div>
+
 <!-- Display Search History of City -->
-  <div class="row">
-    <div class= "col-md-12">
-        <div class= "panel panel-default">
-          <div class = "panel heading" id="history">
-          <h2 class="panel-title">History</h2>
-          </div>
-            <div class="panel-body">
-                <div class="col-sm-12">
-                   <br>
-                </div>   
-          </div>
-        </div>
-      </div>            
-  </div>                
-  <!--  -->
-  <div class="row">
-    <div class= "col-md-12">
-            <div class="current weather" style="text-align: center" id="currentWeather">
-              <div class= "panel panel-default">
-                <div class = "panel heading">
-                <h2 class="panel-title">Current Weather</h2>
+
+
+        
+
+    <h2 >History</h2> 
+      <div class="card" style="width: 18rem;">
+        <div class="card" id="history">
+          <ul class="list-group list-group-flush" id="history">
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+          </ul>
+      </div>
+</div>      
+            
+                     
+  <!-- Current Weather Card: id currentWeather/currentCity/ -->
+  <!-- <div class="row">
+    <div class= "col-md-3"> -->
+      <div class="current weather" style="text-align: center">
+        <!-- <div class= "panel panel-default">
+          <div class = "panel heading"> -->
+            <h2 class="panel-title">Current Weather</h2>
+
+              <div class="card" style="width: 10rem col-md;">
+                 <!-- <img src="..." class="card-img-top" alt="..."> -->
+                  <div class="card-body">
+                  <h3 class="card-title" id="currentCity"></h3>
+                  <h4 class="card-text"></h4>
+                  
+                  </div>
+                <div class="card-body"> 
+                  <h5 class ="card-text" id="currentWeather"></h5>
                 </div>
               </div>
-            </div>
-
+          </div>
+       </div>              
+     </div>
+  </div>
+</div>
+<!-- Five Day Forecast Cards  -->
+<div class="row"></div>
+ <div class="fiveDayForecast" style="text-align: center">
+                  <h2>5 day Forecast</h2> 
+<div class="card-group">
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">Tomorrow</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    
+    </div>
+  </div>
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+  </div>
+  <div class="card">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+     
+    </div>
+  </div>
 </div>
 
 
-
-
-                <div class="fiveDayForecast" style="text-align: center">
-                  <h2>5 day Forecast</h2>             
+                           
 
 
 
@@ -71,7 +114,11 @@
   </div>
 </div>
 </div>
-
+                             </div>   
+          </div>
+        </div>
+      </div>            
+  </div>
 
 
 
