@@ -15,65 +15,56 @@ console.log(queryURLBase);
 var queryTerm = [];
 // $("queryTerm").textContent = userInput;
 // localStorage.setItem("#searchTerm" , userInput);
-
-
-
+// localStorage.getItem("#searchTerm" , queryTermList)=$("<div>");
 // var userInput = $("queryTerm-input").val();;
 // console.log(userInput);
 
 var queryTerm=$("#searchTerm").val();;
-
 queryTermList = JSON.parse(localStorage.getItem("queryTerm")) || [];
 localStorage.getItem(queryTerm, queryTermList);
-// localStorage.getItem("#searchTerm" , queryTermList)=$("<div>");
 console.log(queryTermList);
-// ("#search").append(localStorage.getItem(queryTerm));
-
-// local Storage
-
-
+$("#history").append(queryTerm);
   function lastCitySearch() {
-  for (var i = 0; i < queryTermList.length; i++) {
-      var queryTermLi = $('<li>');
-      queryTerm.text(queryTerm[i]);
-      $("#history").append(queryTerm);
+    for (var i = 0; i < queryTermList.length; i++) {
+      var queryTermDiv = $("<div>");
+      queryTermDiv.text(queryTermList[i]);
+     $("#history").append(queryTermDiv);
+      queryTermDiv.appendTo("#history");
     
       console.log(lastCitySearch);
+    }
   }
-  lastCitySearch();
-  }
 
-
-
+// Set Current Time with Moment.js 
 var now = moment().format("LLLL");
   // console.log(now);
-  $("#currentWeather").append(now);
-
+  $("#currentTime").append(now);
+// Five Day Forecast
+// for (var i = 0; i < response.list.length; i++){
+    // console.log (response.list.length);
+    //  temperature id=currentWeather
 
 var queryTerm ="";
 function runQuery(queryURL){
   $.ajax({url: queryURL, method: "GET"})
     .then(function(response) {
     console.log(response);
-  
-
-    for (var i = 0; i < response.list.length; i++){
-    console.log (response.list.length);
-    //  temperature id=currentWeather
-    var currentTemp = $("<div>");
-    $("#currentTemp").text(response.list[0].main.temp);
-    var tempF = (response.list[0].main.temp - 273.15) * 1.8 + 32;
-    console.log(tempF);
-    $("#currentWeather").append("Temperature: "+     tempF.toFixed() + " F");
+    var temp = $("<div>");
+    $("#temp").text(response.list[0].main.temp);
+    var currentTemp= (response.list[0].main.temp - 273.15) * 1.8 + 32;
+    console.log(currentTemp);
+    $("#currentTemp").append("Temperature: "+     currentTemp.toFixed() + " F");
     console.log(response.list[0].main.temp);
-    var humidity = $("<div>");
+    
     console.log(response.list[0].main.humidity);
     $("#humidity").text(response.list[0].main.humidity);
-    
-    $("#currentWeather").append("Humidity: " + response.list[0].main.humidity + "  %");
+    $("#currentHumidity").append("Humidity: " + response.list[0].main.humidity + "  %");
     // $("#currentWeather").append(humidity);
     // console.log(response.list[i].main.weather.icon);
-//     console.log(response.list[i].wind.speed);
+    console.log(response.list[0].wind.speed);
+    $("#wind").text(response.list[0].wind.speed);
+    $("#currentWind").append("Wind: @ " + response.list[0].wind.speed  +  "mph");
+
 // console.log(response.list[7].main.temp);
 // localStorage.setItem("currentTemp", response.list[7].main.temp);
 // localStorage.setItem("currentTempList", JSON.stringify([response.list[7].main.temp]));
@@ -85,24 +76,24 @@ function runQuery(queryURL){
 
 // // set Functions
 
-    }
+    // }
   })
 }
 
 // Main Process to run Query
 $("#searchBtn").on("click", function(event){
   event.preventDefault();
-  
-  // var queryTerm=$("#searchTerm").val();;
-  // localStorage.setItem("#searchTerm", queryTerm);
-  // var queryTermList = localStorage.setItem("#searchTerm", JSON.stringify([queryTerm])) || "Nashville";
+  var queryTermList = localStorage.setItem("#searchTerm", JSON.stringify([queryTerm])) || "Nashville";
+  var queryTerm = [];
+  var queryTerm=$("#searchTerm").val();;
   localStorage.setItem("#searchTerm", queryTerm);
-var queryTermList = localStorage.setItem("#searchTerm", JSON.stringify([queryTerm])) || "Nashville";
-  localStorage.getItem(queryTerm, queryTermList);
-  // localStorage.getItem("#searchTerm" , queryTermList)=$("<div>");
-  console.log(queryTermList);
+localStorage.setItem("searchTermList", queryTermList);
+
+
+//  queryTermList = JSON.parse(localStorage.setItem("queryTerm")) || [];
 
   var queryTerm = $("#searchTerm").val().trim();
+  $("#currentCity").append(queryTerm);
   var newURL = queryURLBase + "&q=" + queryTerm;
   runQuery(newURL);
   // runQuery("http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=" + apiKey);

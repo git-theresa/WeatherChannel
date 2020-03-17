@@ -28,20 +28,12 @@
 <!-- Display Search History of City -->
 
 
-        
-
+ <div class="col-md-3">       
+<div class = "historyForm" id="history">
     <h2 >History</h2> 
-      <div class="card" style="width: 18rem;">
-        <div class="card" id="history">
-          <ul class="list-group list-group-flush" id="history">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-          </ul>
-      </div>
-</div>      
+    
+</div>
+  </div>      
             
                      
   <!-- Current Weather Card: id currentWeather/currentCity/ -->
@@ -51,16 +43,20 @@
         <!-- <div class= "panel panel-default">
           <div class = "panel heading"> -->
             <h2 class="panel-title">Current Weather</h2>
-
+     
               <div class="card" style="width: 10rem col-md;">
                  <!-- <img src="..." class="card-img-top" alt="..."> -->
                   <div class="card-body">
-                  <h3 class="card-title" id="currentCity"></h3>
-                  <h4 class="card-text"></h4>
-                  
+                  <h3 class="card-title" id="currentTime"></h3>
+                  </div>
+                  <div class="card-body">
+                  <h4 class="card-text" id="currentCity"></h4>
                   </div>
                 <div class="card-body"> 
-                  <h5 class ="card-text" id="currentWeather"></h5>
+                  <h5 class ="card-text" id="currentTemp"></h5>
+                  <h5 class = "card-text" id="currentHumidity"></h5>
+                  <h5 class = "card-text" id="currentWind"></h5>
+                  <h5 class = "card-text" id=""></h5>
                 </div>
               </div>
           </div>
@@ -72,34 +68,68 @@
 <div class="row"></div>
  <div class="fiveDayForecast" style="text-align: center">
                   <h2>5 day Forecast</h2> 
-<div class="card-group">
+ </div>            
+
+<div class="card-group col-md-10">
   <div class="card">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
       <h5 class="card-title">Tomorrow</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    
+      <p class="card-text" id="dayTemp"></p>
+      <p class="card-text" id="dayHumidity"></p>
+      <p class="card-text" id="dayWind"></p>
+      <p class="card-text" id="dayUvIndex"></p>
     </div>
   </div>
+
   <div class="card">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <h5 class="card-title">Day 2</h5>
+      <p class="card-text" id="dayTemp"></p>
+      <p class="card-text" id="dayHumidity"></p>
+      <p class="card-text" id="dayWind"></p>
+      <p class="card-text" id="dayUvIndex"></p>
     </div>
   </div>
+
   <div class="card">
     <!-- <img src="..." class="card-img-top" alt="..."> -->
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+      <h5 class="card-title">Day 3</h5>
+      <p class="card-text" id="dayTemp"></p>
+      <p class="card-text" id="dayHumidity"></p>
+      <p class="card-text" id="dayWind"></p>
+      <p class="card-text" id="dayUvIndex"></p>
      
     </div>
   </div>
+
+
+<div class="card">
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <div class="card-body">
+    <h5 class="card-title">Day 4</h5>
+    <p class="card-text" id="dayTemp"></p>
+    <p class="card-text" id="dayHumidity"></p>
+    <p class="card-text" id="dayWind"></p>
+    <p class="card-text" id="dayUvIndex"></p>
+    <p class="card-text">
+  </div>
 </div>
 
-
+<div class="card">
+  <!-- <img src="..." class="card-img-top" alt="..."> -->
+  <div class="card-body">
+    <h5 class="card-title">Day 5</h5>
+    <p class="card-text" id="dayTemp"></p>
+    <p class="card-text" id="dayHumidity"></p>
+    <p class="card-text" id="dayWind"></p>
+    <p class="card-text" id="dayUvIndex"></p>
+    <p class="card-text">
+  </div>
+</div>
+</div>
                            
 
 
