@@ -1,10 +1,10 @@
 // set Variables
 var apiKey = "a40d2c347523bc6c683485054db1e19c";
 // var queryURLBase = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=" + apiKey;
-var queryURLFiveDay = "http://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=a40d2c347523bc6c683485054db1e19c";
+var queryURLFiveDay = "https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID=a40d2c347523bc6c683485054db1e19c";
 console.log(queryURLFiveDay);
-var queryURLToday = "http://api.openweathermap.org/data/2.5/weather?APPID=" + apiKey + "&q=";
-var uvURLBase = "http://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}";
+var queryURLToday = "https://api.openweathermap.org/data/2.5/weather?APPID=" + apiKey + "&q=";
+var uvURLBase = "https://api.openweathermap.org/data/2.5/uvi?appid={appid}&lat={lat}&lon={lon}";
 
 
 
@@ -47,32 +47,41 @@ function runQuery(){
     $.ajax({url: queryURLToday + queryTerm, method: "GET"})
     .then(function(response) {
     console.log(response);
+   $("#currentTemp").empty();
+
+$("#currentWind").empty();
+$("#currentHumidity").empty();
     var lat = response.coord.lat;
     var lon = response.coord.lon;
-    var uvURL = "http://api.openweathermap.org/data/2.5/uvi?APPID=" + apiKey +  "&lat=" + lat + "&lon=" + lon;
+    var uvURL = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apiKey +  "&lat=" + lat + "&lon=" + lon;
    
     var temp = $("<div>");
     
     $("#temp").text(response.main.temp);
+    
     var currentTemp= (response.main.temp - 273.15) * 1.8 + 32;
     console.log(currentTemp);
-     $("#temp").empty();
+     
     $("#currentTemp").append("Temperature: "+     currentTemp.toFixed() + " F");
+   
     console.log(response.main.temp);
 
     console.log(response.main.humidity);
     $("#humidity").text(response.main.humidity);
+    
     $("#currentHumidity").append("Humidity: " + response.main.humidity + "  %");
    
     console.log(response.wind.speed);
     $("#wind").text(response.wind.speed);
     $("#currentWind").append("Wind: @ " + response.wind.speed  +  "mph");
+    
 
       $.ajax({url: uvURL, method: "GET"})
       .then(function(resp) {
       console.log(resp);
-      
+       $("#uv").empty();
       $("#uv").append("UV Index: " + resp.value);
+     
      })
     })
 
@@ -156,7 +165,7 @@ function runQuery(){
   queryTermDiv.appendTo("#history");
  
   localStorage.setItem("searchTerm", queryTerm);
-localStorage.setItem("searchTermList", JSON.stringify(queryTermList));
+  localStorage.setItem("searchTermList", JSON.stringify(queryTermList));
 
 
   // var queryTerm = $("#searchTerm").val().trim();
