@@ -97,17 +97,17 @@ function runQuery(){
       var fiveDayCard = $("<div class='card'>");
        var fiveDayTemp = $("<div>");
        fiveDayTemp.text(fiveDayFaren);
-        fiveDayCard.append("Temp: " + fiveDayFaren + " F");
+        fiveDayCard.append("<p>Temp: " + fiveDayFaren + " F</p>");
        $("#fiveDay").append(fiveDayCard);
       
       var fiveDayHumidity = $("<div>");
       fiveDayHumidity.text(forecastData.list[i].main.humidity);
-      fiveDayCard.append("Humidity: " + forecastData.list[i].main.humidity + "%");
+      fiveDayCard.append("<p>Humidity: " + forecastData.list[i].main.humidity + "%</p>");
       $("#fiveDay").append(fiveDayCard);
        
       var fiveDayWind = $("<div>");
       fiveDayWind.text(forecastData.list[i].wind.speed);
-      fiveDayCard.append("Wind @ " + forecastData.list[i].wind.speed + "mph");
+      fiveDayCard.append("<p>Wind @ " + forecastData.list[i].wind.speed + "mph</p>");
       $("fiveDay").append(fiveDayCard);
  
 
