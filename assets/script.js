@@ -28,7 +28,7 @@ var now = moment().format("LLLL");
 
 function lastCitySearch() {
     for (var i = 0; i < queryTermList.length; i++) {
-      var queryTermDiv = $("<div>");
+      var queryTermDiv = $("<div>").text(queryTerm[i]);
       queryTermDiv.text(queryTermList[i]);
      $("#history").append(queryTermDiv);
       queryTermDiv.appendTo("#history");

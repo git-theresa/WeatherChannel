@@ -1,0 +1,11 @@
+
+body {
+font-family: 'Roboto Mono', monospace;
+ background-image:  url('dreamcodes/bg_images/color/c12.jpg');
+ background-color:#589ca7 
+ 
+ }
+ .card-deck {
+    padding: 5%;
+
+ }
