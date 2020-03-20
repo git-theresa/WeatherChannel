@@ -50,6 +50,7 @@ function runQuery(){
     $("#currentTemp").empty();
     $("#currentWind").empty();
     $("#currentHumidity").empty();
+    $(".current img").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
     var lat = response.coord.lat;
     var lon = response.coord.lon;
     var uvURL = "https://api.openweathermap.org/data/2.5/uvi?q=" + queryTerm + "&appid=" + apiKey +  "&lat=" + lat + "&lon=" + lon;
@@ -95,7 +96,11 @@ function runQuery(){
  
       var fiveDayFaren = Math.floor((forecastData.list[i].main.temp- 273.15) * 1.8 + 32);
       var fiveDayCard = $("<div class='card'>");
-       var fiveDayTemp = $("<div>");
+      var iconImg = $("<img>");
+      iconImg.attr("src", "http://openweathermap.org/img/wn/" + forecastData.list[i].weather[0].icon + "@2x.png");
+      fiveDayCard.append(iconImg); 
+      var fiveDayTemp = $("<div>");
+
        fiveDayTemp.text(fiveDayFaren);
         fiveDayCard.append("<p>Temp: " + fiveDayFaren + " F</p>");
        $("#fiveDay").append(fiveDayCard);
