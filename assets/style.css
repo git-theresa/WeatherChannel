@@ -1,10 +1,14 @@
 
 body {
-font-family: 'Roboto Mono', monospace;
- background-image:  url('dreamcodes/bg_images/color/c12.jpg');
- background-color:#589ca7 
- 
+font-family: 'Bellota Text', cursive;
+background:#589ca7 url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top;
  }
+/* 
+ background-image:  url('../dreamcodes/bg_images/color/c12.jpg'); */
+/*  
+ background-color:#589ca7  */
+
+ 
  .card-deck {
     padding: 5%;
 
@@ -37,6 +41,7 @@ font-family: 'Roboto Mono', monospace;
  
  @media screen and (max-width: 767.98px) {
    body {
+      background:#589ca7
    }
  }
    .wrapper {
@@ -45,9 +50,10 @@ font-family: 'Roboto Mono', monospace;
  
  @media screen and (max-width: 575.98px) { 
    body { 
+      background:#589ca7
      
    }
  }
    .wrapper {
    width: 250px;
-   } */
+   } 
