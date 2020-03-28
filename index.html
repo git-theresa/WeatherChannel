@@ -3,87 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Link BootStrap & CSS -->
-<link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
-
+    <!-- Link BootStrap & CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Bellota+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
-  <link rel="stylesheet" href="assets/style.css" />
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
+    <link rel="stylesheet" href="assets/style.css" />
  
+    <title>Weather Dashboard</title> 
+<body>
 
-
-    <title>Weather Channel</title> 
-<!-- Begin Visual HTML -->
-
-<body>  
-  
-<div class= "container">
-  <!-- <div class="row"> -->
-
-    <div class="searchForm" id="search">
-      <div id = "search" class="flex-center flex-columns">
-        <input type="text" class="form" id="searchTerm"> 
-        <button type="submit" class="btn btn-default" id="searchBtn">
-        <i class="fa fa-search"></i>Get Weather</button>
+    <!-- JumboTron with Search Button -->
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+      <div class="searchForm" id="search">
+        <div id = "search" class="flex-center flex-columns">
+          <input type="text" class="form" id="searchTerm"> 
+            <button type="submit" class="btn btn-default" id="searchBtn">
+              <i class="fa fa-search"></i>Get Weather</button>
+        </div>
       </div>
-    </div>  
+  </div>
+</div>
+<!-- Main Body  -->
+<div class="container">
 
-<!-- Display Search History of City -->
-<div class="row" style="justify-content: space-between;">
-  
-    <div class = "historyForm" id="history">
-      <h2 >History</h2> 
-    </div>
-      
-            
-                     
-  <!-- Current Weather Card: id currentWeather/currentCity/ -->
- 
-<div class="current weather card" style="text-align: center; width: 25rem;">
+  <!-- Display Search History of City -->
   
     
-        <h2>Current Weather</h2>
-        <img src="" class="card-img-top" alt="weather icon">
-          <div class="card-body">
-              <h3 class="card-title" id="currentTime"></h3>
-              </div>
-                <div class="card-body">
-                  <h4 class="card-text" id="currentCity"></h4>
-                  </div>
-                    <div class="card-body"> 
-                    <h5 class ="card-text" id="currentTemp"></h5>
+<div class="card-group">
+  <div class="card" id="history">
+ 
+    <div class="card-body">
+      <h5 class="card-title">Search History</h5>
+    </div>
+  </div>
+     
+    
+ 
+  <div class="card">
+    <div class="current weather card">
+    <h2>Current Weather</h2>
+<h3 class="card-title" id="currentTime"></h3>
+    <img src="" class="card-img-top" alt="weather icon">
+    <div class="card-body">
+      <h4 class="card-text" id="currentCity"></h4>
+      <h5 class ="card-text" id="currentTemp"></h5>
                     <h5 class = "card-text" id="currentHumidity"></h5>
                     <h5 class = "card-text" id="currentWind"></h5>
                     <h5 class = "card-text" id="uv"></h5>
-                   </div>
-              </div>
-          </div>
-                  
-     </div>
+      
+      
+    </div>
+  
+     
+    </div>
   </div>
 </div>
-<!-- Five Day Forecast Cards  -->
-<div class="card-deck" id="fiveDay"></div>
 
-          
+ <!-- Current Weather Card: id currentWeather/currentCity/ -->
 
 
+<!-- <div class="current weather card" style="text-align: center; width: 25rem;">         -->
 
 <!-- End Container Div -->
 </div>
-</div>
+</div>   
+<!-- Five Day Forecast Cards  -->
+<div class="card-deck" id="fiveDay"></div>        
 
-
-
-
-
-
-<!-- Do Not Touch!!! jQuery Bootstrap Moment.js -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-<!-- JavaScript File -->
-<script type="text/javascript" src="assets/script.js"></script>
-</head>
-</body>
+            <!-- Do Not Touch!!! jQuery Bootstrap Moment.js -->
+            <script src="https://code.jquery.com/jquery.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+            <!-- JavaScript File -->
+            <script type="text/javascript" src="assets/script.js"></script>
+     </head>
+  </body>
 </html>

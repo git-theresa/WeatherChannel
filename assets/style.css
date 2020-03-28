@@ -1,14 +1,37 @@
-
+.jumbotron {
+  font-family: 'Fredericka the great', cursive;
+}
 body {
-font-family: 'Bellota Text', cursive;
+font-family: 'Bad Script', cursive;
 background:#589ca7 url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top;
  }
-/* 
- background-image:  url('../dreamcodes/bg_images/color/c12.jpg'); */
-/*  
- background-color:#589ca7  */
+#history {
+  border: 7px solid #1C6EA4;
+  height: 50%;
+  border-radius: 13px;
 
- 
+
+  padding-right: 2px;
+  font-family: 'Fredericka the great', cursive;
+  justify-content: center;
+}
+
+.current  {
+  
+  padding: 10%;
+  margin: inherit;
+  justify-content: center;
+  font-family: 'Fredericka the great', cursive;
+}
+.card-group{
+  padding: 5%;
+}
+.card{
+  height: 20%;
+  box-sizing: border-box;
+  column-count: 3;
+  padding: 5%
+}
  .card-deck {
     padding: 5%;
 
@@ -21,39 +44,35 @@ background:#589ca7 url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat cen
  /* Media Screen Sizing */
 
 /* @media screen and (max-width: 991.98px) {
-   body {
-     
-   }
- }
+  body {
+  }
+}
    .wrapper {
    width: 625px;
-   }
- 
- @media screen and (max-width: 970px) {
+   } */
+@media screen and (max-width: 970px) {
      body {
-      
- }
- }
-       /* The wrapper's width will be 600px */
-     .wrapper {
-       width: 600px;
      }
+}
+       /* The wrapper's width will be 600px */
+.wrapper {
+width: 600px;
+}
  
- @media screen and (max-width: 767.98px) {
+@media screen and (max-width: 767.98px) {
    body {
-      background:#589ca7
+   background:#589ca7
    }
- }
-   .wrapper {
-     width: 500px;
-   }
+}
+.wrapper {
+width: 500px;
+}
  
- @media screen and (max-width: 575.98px) { 
-   body { 
-      background:#589ca7
-     
-   }
+@media screen and (max-width: 575.98px) { 
+    body { 
+    background:#589ca7
+    }
  }
-   .wrapper {
-   width: 250px;
-   } 
+.wrapper {
+width: 250px;
+} 
