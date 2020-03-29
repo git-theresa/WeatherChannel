@@ -16,7 +16,7 @@ var queryTermList = [];
 if (localStorage.getItem("searchTermList") != null) {
 queryTermList = JSON.parse(localStorage.getItem("searchTermList"));
 }
-$("#history").append(queryTerm);
+
 
 function lastCitySearch() {
   for (var i = 0; i < queryTermList.length; i++) {
@@ -24,8 +24,11 @@ function lastCitySearch() {
   queryTermDiv.text(queryTermList[i]);
   $("#history").append(queryTermDiv);
   queryTermDiv.appendTo("#history");
+  
   }
 }
+$("#history").append(queryTerm);
+
 // Current Weather Function
 function runQuery(){
    $.ajax({url: queryURLToday + queryTerm, method: "GET"})
@@ -33,6 +36,7 @@ function runQuery(){
       $("#currentTemp").empty();
       $("#currentWind").empty();
       $("#currentHumidity").empty();
+      
       $(".current img").attr("src", "http://openweathermap.org/img/wn/" + response.weather[0].icon + "@2x.png");
       var lat = response.coord.lat;
       var lon = response.coord.lon;
@@ -61,15 +65,21 @@ function runQuery(){
       $("#fiveDayHumidity").empty();
       $("#fiveDayWind").empty();
       $("#fiveDayDate").empty();
+      $("#iconImg").empty();
 
         for (var i = 0; i < 5; i++) {
         var fiveDayFaren = Math.floor((forecastData.list[i].main.temp- 273.15) * 1.8 + 32);
         var fiveDayCard = $("<div class='card'>");
         var fiveDayDate = $("<div>");
         $("#fiveDayDate").append("<p>" + moment().add(i + 1, "day").format("dddd") + "</p>");
+        fiveDayCard.append("<p>" + moment().add(i + 1, "day").format("dddd") + "</p>")
+        $("#fiveDay").append(fiveDayCard);
+      
+
         var iconImg = $("<img>");
         iconImg.attr("src", "http://openweathermap.org/img/wn/" + forecastData.list[i].weather[0].icon + "@2x.png");
         fiveDayCard.append(iconImg); 
+
         var fiveDayTemp = $("<div>");
         fiveDayTemp.text(fiveDayFaren);
         fiveDayCard.append("<p>Temp: " + fiveDayFaren + " F</p>");
@@ -83,8 +93,6 @@ function runQuery(){
         var fiveDayWind = $("<div>");
         fiveDayWind.text(forecastData.list[i].wind.speed);
         fiveDayCard.append("<p>Wind @ " + forecastData.list[i].wind.speed + "mph</p>");
-        $("#fiveDay").append(fiveDayCard);
-        // var fiveDayDate = $("<div>");
         }
       });
 }

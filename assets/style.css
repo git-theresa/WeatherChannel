@@ -1,45 +1,80 @@
-.jumbotron {
-  font-family: 'Fredericka the great', cursive;
-}
 body {
 font-family: 'Bad Script', cursive;
-background:#589ca7 url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top;
- }
+background:#96d8e2;
+background-image: url("gradient_bg.png");
+background-repeat: repeat-x;
+
+ /* url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top; */
+}
+
+.top{
+  padding-bottom: 2%;
+  text-align: center;
+  font-family: 'Fredericka the great', cursive;
+  background: #96d8e2;; 
+  /* background-image: url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top; */
+  border: 3px solid rgb(100, 177, 228)
+} 
+
+.btn{
+  border: .5px solid rgb(100, 177, 228)
+}
+
 #history {
-  border: 7px solid #1C6EA4;
+  border: 7px solid rgb(127, 194, 238);
   height: 50%;
   border-radius: 13px;
-
-
-  padding-right: 2px;
+  float: left !important;
+  margin: 3rem !important;
+  margin-left: 20px !important;
+  text-align: center;
   font-family: 'Fredericka the great', cursive;
-  justify-content: center;
+  justify-content: flex-end;
+  background-color: ;
 }
 
 .current  {
-  
+  border: 7px solid rgb(100, 177, 228);
+  float: left;
   padding: 10%;
-  margin: inherit;
+  margin-left:.25rem !important;
+  text-align: center;
   justify-content: center;
   font-family: 'Fredericka the great', cursive;
 }
+
 .card-group{
   padding: 5%;
 }
-.card{
+
+.card{ 
+  border: 7px solid rgb(100, 177, 228);
   height: 20%;
   box-sizing: border-box;
   column-count: 3;
-  padding: 5%
+  padding: 2%;
+}
+.card-img-top{
+  border-radius: 5% !important;
+}
+#fiveDayDate{
+  text-align: center;
+}
+#currentTemp{
+  text-align: left;
+}
+#currentHumidity{
+  text-align: left;
+}
+#currentWind{
+  text-align: left;
+}
+#uv{
+  text-align: left;
 }
  .card-deck {
     padding: 5%;
-
- }
-
-
-
-
+}
 
  /* Media Screen Sizing */
 

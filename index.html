@@ -15,9 +15,9 @@
 <body>
 
     <!-- JumboTron with Search Button -->
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Fluid jumbotron</h1>
+
+  <div class="top">
+    <h1>Weather Dashboard</h1>
       <div class="searchForm" id="search">
         <div id = "search" class="flex-center flex-columns">
           <input type="text" class="form" id="searchTerm"> 
@@ -29,57 +29,44 @@
 </div>
 <!-- Main Body  -->
 <div class="container">
-
+ 
   <!-- Display Search History of City -->
-  
-    
-<div class="card-group">
-  <div class="card" id="history">
+  <div class="card-group">
+      <div class="card" id="history">
+        <div class="card-body">
+          <h5 class="card-title">Search History</h5>
+        </div>
+      </div>
  
-    <div class="card-body">
-      <h5 class="card-title">Search History</h5>
-    </div>
-  </div>
-     
-    
- 
-  <div class="card">
+<!-- Current Weather Card: id currentWeather/currentCity/ -->
     <div class="current weather card">
-    <h2>Current Weather</h2>
-<h3 class="card-title" id="currentTime"></h3>
-    <img src="" class="card-img-top" alt="weather icon">
-    <div class="card-body">
-      <h4 class="card-text" id="currentCity"></h4>
-      <h5 class ="card-text" id="currentTemp"></h5>
-                    <h5 class = "card-text" id="currentHumidity"></h5>
-                    <h5 class = "card-text" id="currentWind"></h5>
-                    <h5 class = "card-text" id="uv"></h5>
-      
-      
+      <div class="card-body">
+        <h2>Current Weather</h2>
+          <h3 class="card-title" id="currentTime"></h3>
+            <h4 class="card-text" id="currentCity"></h4>
+              <img src="" class="card-img-top" alt="weather icon">
+               
+                <h5 class ="card-text" id="currentTemp"></h5>
+                <h5 class = "card-text" id="currentHumidity"></h5>
+                <h5 class = "card-text" id="currentWind"></h5>
+                <h5 class = "card-text" id="uv"></h5>      
+      </div>  
     </div>
-  
-     
-    </div>
-  </div>
+    <!-- End Div Card Group -->
 </div>
-
- <!-- Current Weather Card: id currentWeather/currentCity/ -->
-
-
-<!-- <div class="current weather card" style="text-align: center; width: 25rem;">         -->
-
 <!-- End Container Div -->
-</div>
-</div>   
+</div> 
 <!-- Five Day Forecast Cards  -->
-<div class="card-deck" id="fiveDay"></div>        
-
-            <!-- Do Not Touch!!! jQuery Bootstrap Moment.js -->
-            <script src="https://code.jquery.com/jquery.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-            <!-- JavaScript File -->
-            <script type="text/javascript" src="assets/script.js"></script>
+<div class="card-deck" id="fiveDay">        
+ <h5 class="card-text" id="fiveDayDate"></h5>
+</div>
+<!-- Do Not Touch!!! jQuery Bootstrap Moment.js -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<!-- JavaScript File -->
+<script type="text/javascript" src="assets/script.js"></script>
+<!-- End Content -->
      </head>
   </body>
 </html>
