@@ -3,8 +3,6 @@ font-family: 'Bad Script', cursive;
 background:#96d8e2;
 background-image: url("gradient_bg.png");
 background-repeat: repeat-x;
-
- /* url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top; */
 }
 
 .top{
@@ -12,12 +10,11 @@ background-repeat: repeat-x;
   text-align: center;
   font-family: 'Fredericka the great', cursive;
   background: #96d8e2;; 
-  /* background-image: url('../dreamcodes/bg_images/...color/c12.jpg') no-repeat center top; */
-  border: 3px solid rgb(100, 177, 228)
+   border: 3px solid rgb(100, 177, 228);
 } 
 
 .btn{
-  border: .5px solid rgb(100, 177, 228)
+  border: .5px solid rgb(100, 177, 228);
 }
 
 #history {
@@ -30,7 +27,7 @@ background-repeat: repeat-x;
   text-align: center;
   font-family: 'Fredericka the great', cursive;
   justify-content: flex-end;
-  background-color: ;
+
 }
 
 .current  {
