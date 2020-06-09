@@ -16,6 +16,12 @@
 # About
 This application allows a user to search a city and see the city's local weather forecast utilizing API Key and AJAX calls.
 
+<img src = "assets/weather1.png" alt="screenshot"/>
+
+
+
+
+<img src = "assets/weather2.png" alt="screenshots">
 
 # License
 MIT
